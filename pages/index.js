@@ -4,6 +4,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 import styles from '../styles/Home.module.css'
 
 import products from '../products.json';
+import Nav from '../components/nav';
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
         <link rel="preconnect" href="https://cdn.snipcart.com" />
         <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.21/default/snipcart.css" />
       </Head>
+
+      <Nav />
 
       <main className={styles.main}>
         <div className={styles.header}>
