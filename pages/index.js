@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { FaShoppingCart } from 'react-icons/fa';
 
 import styles from '../styles/Home.module.css'
 
@@ -9,31 +8,9 @@ import Nav from '../components/nav';
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://app.snipcart.com" />
-        <link rel="preconnect" href="https://cdn.snipcart.com" />
-        <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.21/default/snipcart.css" />
-      </Head>
-
       <Nav />
 
       <main className={styles.main}>
-        <div className={styles.header}>
-          <h1 className={styles.title}>
-            Snipcart Store
-          </h1>
-
-          <p className={styles.description}>
-            <a className="snipcart-checkout snipcart-summary" href="#" style={{textDecoration: "none"}}>
-              <FaShoppingCart />
-              <strong className="sr-only">Cart</strong>
-              <span className="snipcart-total-price">$0.00</span>
-            </a>
-          </p>
-        </div>
 
         <div className={styles.grid}>
           {products.map(product => {
@@ -63,9 +40,6 @@ export default function Home() {
       <footer className={styles.footer}>
         &copy; Snipcart Store
       </footer>
-
-      <script async src="https://cdn.snipcart.com/themes/v3.0.21/default/snipcart.js" />
-      <div hidden id="snipcart" data-api-key={process.env.NEXT_PUBLIC_SNIPCART_API_KEY} />
     </div>
   )
 }
